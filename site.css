@@ -1,0 +1,140 @@
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: "telegrama";
+  src: url('telegraw.ttf');
+}
+
+#background-triangles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.tabs {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  padding-top: 1.3em;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.tab.animated {
+  animation-name: fade;
+  animation-duration: 5.4s;
+}
+
+.telegrama {
+  font-family: "telegrama";
+}
+
+.tab, .tab:visited {
+  font-family: "telegrama";
+  text-decoration: none;
+  transition: 0.2s ease;
+  color: #fff;
+  font-size: 2em;
+  padding: 1em;
+
+}
+
+.tab:active, .tab:hover {
+  font-family: "telegrama";
+  text-decoration: underline;
+  transition: 0.2s ease;
+  font-size: 2em;
+  padding: 1em;
+}
+
+.links {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.link {
+}
+
+.link.animated {
+  animation-name: fade;
+  animation-duration: 6s;
+}
+
+.link>img {
+  height: 3.5em;
+  width: auto;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: .20s ease;
+  filter: alpha(opacity=60);
+}
+
+.highlighted {
+  color: #0c0 !important;
+}
+
+.link>img:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+  transition: .20s ease;
+}
+
+/* .content-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  max-width: 80%;
+  height: 40%;
+  max-height: 60%;
+  background-color: #1c1c1c;
+  color: #fff;
+  border-color: #0d0;
+  border-style: dashed;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+} */
+
+.content-box>ul {
+  position: relative;
+  top: 30%;
+}
+
+.content-box>.content-image {
+  position: relative;
+  top: 10%;
+  float: right;
+  width: 30%;
+  z-index: 9;
+}
+
+.bio-photo {
+  background: url(profile.jpg);
+}
