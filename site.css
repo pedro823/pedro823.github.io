@@ -17,6 +17,14 @@
   src: url('telegraw.ttf');
 }
 
+a:link {
+  color: #0c0
+}
+
+a:visited {
+  color: #008e00
+}
+
 #background-triangles {
   position: fixed;
   top: 0;
@@ -106,34 +114,31 @@
   transition: .20s ease;
 }
 
-/* .content-box {
-  position: absolute;
+ .content-box {
+  position: fixed;
   top: 50%;
   left: 50%;
-  width: 80%;
-  max-width: 80%;
-  height: 40%;
-  max-height: 60%;
+  width: 70%;
+  font-size: 20pt;
   background-color: #1c1c1c;
   color: #fff;
   border-color: #0d0;
   border-style: dashed;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
-} */
+} 
 
-.content-box>ul {
-  position: relative;
-  top: 30%;
+.content-box>ul>li {
+  padding-bottom: 18px;
 }
 
-.content-box>.content-image {
+/* .content-box>.content-image {
   position: relative;
-  top: 10%;
+  right: 0px;
   float: right;
-  width: 30%;
+  overflow: auto;
   z-index: 9;
-}
+} */
 
 .bio-photo {
   background: url(profile.jpg);
