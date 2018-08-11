@@ -20,10 +20,10 @@
       $json = json_decode($content, true);
       echo <<<EOL
       <div class="post">
-        <div class="title f2">
+        <div class="title f1">
           $json[title]
         </div>
-        <div class="content">
+        <div class="content f3">
           $json[content]
         </div>
       </div>
@@ -31,11 +31,6 @@ EOL;
     }
   ?>
   </p>
-  </div>
-  <div class="links">
-    <a class="link" href="https://www.github.com/pedro823"><img src="gh.png" /></a>
-    <a class="link" href="https://devpost.com/pedro823"><img src="https://devpost-challengepost.netdna-ssl.com/assets/reimagine2/devpost-logo-646bdf6ac6663230947a952f8d354cad.svg" /></a>
-    <a class="link" href="https://www.linkedin.com/in/pedro-leyton-pereira-584371157/"><img src="lkdn.png" /></a>
   </div>
 </body>
 </html>

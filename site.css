@@ -153,6 +153,7 @@ a:visited {
   border: 1px solid green;
   display: inline-block;
   text-align: justify;
+  margin-bottom: 50px;
 }
 
 .post>.title {
@@ -165,16 +166,22 @@ a:visited {
 }
 
 .post>.content {
+  padding: 8px;
   font-family: "telegrama";
   display: block;
   background-color: #000;
   color: #008e00;
 }
 
-.content-box>ul>li {
-  padding-bottom: 18px;
+.sections {
+  text-align: center;
+  width: 100%;
 }
 
-.bio-photo {
-  background: url(profile.jpg);
+.section {
+  width: 70%;
+  border: 1px solid green;
+  display: inline-block;
+  text-align: justify;
+  margin-bottom: 50px;
 }
