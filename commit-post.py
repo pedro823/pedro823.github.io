@@ -6,6 +6,7 @@ import re
 
 class ParseException(Exception):
     file = ''
+
     def __init__(self, message):
         self.message = message
 
@@ -15,7 +16,7 @@ class ParseException(Exception):
         return self.message
 
 
-def parse_file(file_descriptor: list) -> tuple:
+def parse_file(file_descriptor: TextIOWrapper) -> tuple:
     state = 0
     title = ''
     content = ''
@@ -42,7 +43,7 @@ def parse_file(file_descriptor: list) -> tuple:
     if not found_content:
         raise ParseException('Expected "### CONTENT ###" line to be found '
                              + 'somewhere in the file, but wasn\'t found.')
-    file_title = re.sub(r'\s+', '-', title.strip())
+    file_title = re.sub(r'\s+', '-', title.strip()).replace('/', '_')
     return json.dumps(dict(title=title, content=content)), file_title
 
 
@@ -50,13 +51,16 @@ BASE_DIR = 'post-tester'
 
 for file in sorted(os.listdir(BASE_DIR)):
     try:
-        with open('%s/%s' % (BASE_DIR, file), 'r+') as f:
+        with open(f'{BASE_DIR}/{file}', 'r') as f:
             final_json, title = parse_file(f)
             if title != '':
-                with open('blog/posts/%s.json' % title, 'w+') as outfile:
+                print(f'creating blog/posts/{title}.json...')
+                with open(f'blog/posts/{title}.json', 'w') as outfile:
                     outfile.write(final_json)
-            f.seek(0)
-            f.write('### COMMITTED ###\n')
+        with open(f'{BASE_DIR}/{file}', 'r') as f:
+            whole_text = f.read()
+        with open(f'{BASE_DIR}/{file}', 'w') as f:
+            f.write(f'### COMMITTED ###\n{whole_text}')
     except ParseException as e:
         e.file = file
         raise

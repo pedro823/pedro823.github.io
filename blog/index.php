@@ -15,11 +15,12 @@
   <div class="posts">
   <?php
     $files = glob('posts/*.json');
+    $id_num = count($files);
     foreach($files as $postfile) {
       $content = file_get_contents($postfile);
       $json = json_decode($content, true);
       echo <<<EOL
-      <div class="post">
+      <div class="post" id="post-$id_num">
         <div class="title f1">
           $json[title]
         </div>
@@ -28,6 +29,7 @@
         </div>
       </div>
 EOL;
+      $id_num -= 1;
     }
   ?>
   </p>
