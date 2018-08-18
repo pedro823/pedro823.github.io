@@ -7,9 +7,9 @@
 </head>
 <body>
   <div class="tabs">
-    <a class="tab f2" href="whoami">whoami</a>
-    <a class="tab highlighted f2" href="/">back</a>
-    <a class="tab f2" href="etc">etc.</a>
+    <a class="tab f2" href="../whoami">whoami</a>
+    <a class="tab highlighted f2" href="..">back</a>
+    <a class="tab f2" href="../etc">etc.</a>
   </div>
   <p style="color: #fff">
   <div class="posts">
