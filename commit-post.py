@@ -31,7 +31,6 @@ def parse_file(file_descriptor: TextIOWrapper) -> tuple:
             else:
                 raise ParseException('Expected "### TITLE ###" at line %d'
                                      % idx)
-
         elif state == 1:  # Waiting for title
             if line.strip() == '### CONTENT ###':
                 found_content = True
@@ -47,7 +46,7 @@ def parse_file(file_descriptor: TextIOWrapper) -> tuple:
     return json.dumps(dict(title=title, content=content)), file_title
 
 
-BASE_DIR = 'post-tester'
+BASE_DIR = 'posts'
 
 for file in sorted(os.listdir(BASE_DIR)):
     try:
