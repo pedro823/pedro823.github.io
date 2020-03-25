@@ -58,7 +58,7 @@ a:visited {
 
 .tab.animated {
   animation-name: fade;
-  animation-duration: 5.4s;
+  animation-duration: 1s;
 }
 
 .telegrama {
@@ -97,7 +97,7 @@ a:visited {
 
 .link.animated {
   animation-name: fade;
-  animation-duration: 6s;
+  animation-duration: 1s;
 }
 
 .link>img {
@@ -125,7 +125,7 @@ a:visited {
   transition: .20s ease;
 }
 
- .content-box {
+.content-box {
   position: fixed;
   top: 50vh;
   left: 50vw;
@@ -137,64 +137,4 @@ a:visited {
   border-style: dashed;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
-}
-
-.posts {
-  width: 100%;
-  text-align: center;
-  z-index: 1;
-}
-
-.post {
-  width: 70%;
-  border: 1px solid green;
-  display: inline-block;
-  text-align: justify;
-  margin-bottom: 50px;
-}
-
-.post>.title {
-  padding: 10px;
-  font-family: "telegrama";
-  display: block;
-  color: #fff;
-  background-color: #222;
-  text-align: center;
-}
-
-.post>.content {
-  padding: 8px;
-  font-family: "telegrama";
-  display: block;
-  background-color: #000;
-  color: #008e00;
-}
-
-.sections {
-  text-align: center;
-  width: 100%;
-}
-
-.section {
-  width: 70%;
-  padding: 8px;
-  display: inline-block;
-  text-align: justify;
-  margin-bottom: 50px;
-}
-
-.section>.content {
-  padding: 0 18px;
-  display: none;
-  opacity: 0.7;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-
-.section>.title {
-  border: 1px solid green;
-  color: #fff;
-  cursor: pointer;
-  text-align: center;
-  font-family: "telegrama";
 }
